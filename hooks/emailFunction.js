@@ -88,8 +88,8 @@ const sendMail =(orderItem,productItem)=>{
         port: 465,
         secure:true,
         auth: {
-            user: 'cniigyan@gmail.com', // replace with your email
-            pass: 'ihoa nqmr vyle eqev', // replace with your application-specific password
+            user: 'cniigyan@gmail.com', 
+            pass: process.env.PASS,
           },
     });
 
@@ -97,16 +97,9 @@ const sendMail =(orderItem,productItem)=>{
     // Define the email content
 const mailOptions = {
     from: '"Plugworld" <cniigyan@gmail.com>',
-    to: 'niigyanchristian@gmail.com', // replace with the recipient's email
+    to: 'niigyanchristian@gmail.com', 
     subject: 'Order Notification - Plugworld',
     html: html,
-    // attachments: [
-    //     {
-    //       filename: 'example.txt', // the name you want the file to have in the email
-    //       path: 'path/to/your/file/example.txt', // replace with the path to your file
-    //     },
-    //     // You can add more attachments if needed
-    //   ],
   };
   
   // Send the email
