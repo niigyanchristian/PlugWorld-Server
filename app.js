@@ -6,7 +6,6 @@ const registerRoute = require('./routes/register');
 const loginRoute = require('./routes/login');
 const productsRoute = require('./routes/product');
 const ordersRoute = require('./routes/orders');
-const paymentRoute = require('./routes/paymentDetails');
 const notificationRoute = require('./routes/notification');
 const errorRoute = require('./routes/error');
 
@@ -35,7 +34,6 @@ app.use('/api/register',registerRoute);
 app.use('/api/login',loginRoute);
 app.use('/api/products',productsRoute);
 app.use('/api/orders',ordersRoute);
-app.use('/api/payment',paymentRoute);
 app.use('/api/expoPushTokens',notificationRoute);
 app.use('/api/error',errorRoute);
 
