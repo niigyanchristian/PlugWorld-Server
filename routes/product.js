@@ -38,8 +38,7 @@ post((req,res)=>{
     Product.findByIdAndDelete(id).
     then(data=>{
         res.send(data);
-    })
-
+    });
 })
 
 
